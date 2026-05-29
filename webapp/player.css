@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#000;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Arial, sans-serif;
+}
+
+.video-container{
+    width:90%;
+    max-width:1100px;
+}
+
+/* VIDEO ONLY - NO DARK FILTERS */
+video{
+    width:100%;
+    display:block;
+    background:#000;
+    border-radius:12px;
+}
+

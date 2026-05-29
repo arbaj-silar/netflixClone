@@ -1,0 +1,182 @@
+@charset "UTF-8";
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:black;
+    color:white;
+    height:100vh;
+    overflow:hidden;
+}
+
+/* BACKGROUND */
+
+.background{
+    position:fixed;
+    inset:0;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.7),
+    rgba(0,0,0,0.7)),
+    url("assets/images/bga.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:relative;
+    z-index:2;
+
+    padding:25px 60px;
+}
+
+.logo{
+    width:160px;
+}
+
+/* LOGIN CONTAINER */
+
+.login-container{
+    position:relative;
+    z-index:2;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    height:80vh;
+}
+
+/* LOGIN BOX */
+
+.login-box{
+    width:100%;
+    max-width:430px;
+
+    background:rgba(0,0,0,0.75);
+
+    padding:60px 68px;
+
+    border-radius:4px;
+
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.login-box h1{
+    margin-bottom:10px;
+    font-size:32px;
+}
+
+/* INPUTS */
+
+.login-box input{
+    background:#333;
+
+    border:none;
+
+    padding:16px;
+
+    border-radius:4px;
+
+    color:white;
+
+    font-size:16px;
+}
+
+.login-box input:focus{
+    outline:none;
+    background:#444;
+}
+
+/* BUTTON */
+
+.login-box button{
+    background:#e50914;
+
+    color:white;
+
+    border:none;
+
+    padding:16px;
+
+    border-radius:4px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    margin-top:10px;
+}
+
+.login-box button:hover{
+    background:#f6121d;
+}
+
+/* REMEMBER */
+
+.remember{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    font-size:13px;
+
+    color:#b3b3b3;
+}
+
+.remember a{
+    color:#b3b3b3;
+    text-decoration:none;
+}
+
+.remember a:hover{
+    text-decoration:underline;
+}
+
+/* SIGNUP */
+
+.signup-text{
+    color:#737373;
+    margin-top:40px;
+}
+
+.signup-text span{
+    color:white;
+    cursor:pointer;
+}
+
+.signup-text span:hover{
+    text-decoration:underline;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .navbar{
+        padding:20px;
+    }
+
+    .logo{
+        width:120px;
+    }
+
+    .login-box{
+        max-width:90%;
+        padding:40px 30px;
+    }
+}

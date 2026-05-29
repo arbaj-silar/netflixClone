@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Netflix Signup</title> 
+<link rel="stylesheet" href="signup.css"> </head> 
+<body> 
+
+<!-- Navbar --> 
+
+<nav class="navbar"> 
+	<img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" class="logo" alt="Netflix" > 
+</nav> 
+
+<!-- Signup Container --> 
+
+<div class="signup-container"> 
+	<div class="signup-box"> 
+	
+		<p class="step">STEP 1 OF 3</p> 		<h1>Create a password to start your membership</h1> 
+		<p class="desc"> Just a few more steps and you're done! We hate paperwork, too. 
+		</p> 	
+		
+		<!-- Show Email --> 
+		
+		<div class="email-show"> 
+		<span>Email:</span> 
+		
+		<strong> 
+			<%= request.getAttribute("userEmail") %> 
+		</strong> 	
+		
+		</div> 
+		
+		<!-- Form --> 
+		<form action="plan.jsp" method="post"> 
+		
+			<input type="password" name="password" placeholder="Add a password" required > 
+			
+			<button type="submit"> Next </button> 
+		</form> 
+	</div> 
+</div> 
+	
+</body> 
+</html>

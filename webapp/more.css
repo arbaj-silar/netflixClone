@@ -1,0 +1,467 @@
+@charset "UTF-8";
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#141414;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+
+    overflow:hidden;
+}
+
+/* BACKGROUND IMAGE */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+    url("assets/images/moneyheist-banner.jpg")
+    center/cover no-repeat;
+
+    opacity:0.4;
+
+    z-index:1;
+}
+
+/* OVERLAY */
+
+.overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        to top,
+        #141414 5%,
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.8)
+    );
+
+    z-index:2;
+}
+
+/* NAVBAR */
+
+.navbar{
+
+    position:absolute;
+    top:0;
+
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:25px 60px;
+
+    z-index:20;
+}
+
+.logo{
+    width:140px;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#e50914;
+}
+
+/* HERO CONTENT */
+
+.hero-content{
+
+    position:relative;
+
+    z-index:10;
+
+    max-width:700px;
+
+    margin-left:70px;
+
+    padding-top:100px;
+}
+
+/* TAG */
+
+.netflix-tag{
+
+    color:#e50914;
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+    font-weight:bold;
+}
+
+/* TITLE */
+
+.hero-content h1{
+
+    font-size:90px;
+
+    margin-top:15px;
+    margin-bottom:20px;
+
+    font-weight:900;
+
+    text-shadow:
+    0 10px 30px rgba(0,0,0,0.9);
+}
+
+/* META */
+
+.meta{
+
+    display:flex;
+    gap:18px;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+    color:#ddd;
+
+    flex-wrap:wrap;
+}
+
+.match{
+    color:#46d369;
+    font-weight:bold;
+}
+
+.hd,
+.age{
+
+    border:1px solid #999;
+
+    padding:3px 8px;
+
+    border-radius:3px;
+}
+
+/* DESCRIPTION */
+
+.description{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    color:#f1f1f1;
+
+    margin-bottom:35px;
+
+    max-width:650px;
+}
+
+/* BUTTONS */
+
+.buttons{
+    display:flex;
+    gap:15px;
+}
+
+.play-btn,
+.info-btn{
+
+    text-decoration:none;
+
+    padding:14px 32px;
+
+    border-radius:5px;
+
+    font-size:18px;
+    font-weight:bold;
+
+    transition:0.3s ease;
+}
+
+/* PLAY */
+
+.play-btn{
+
+    background:white;
+    color:black;
+}
+
+.play-btn:hover{
+
+    background:#ddd;
+
+    transform:
+    scale(1.05)
+    translateY(-3px);
+}
+
+/* INFO */
+
+.info-btn{
+
+    background:
+    rgba(109,109,110,0.7);
+
+    color:white;
+}
+
+.info-btn:hover{
+
+    background:
+    rgba(109,109,110,0.4);
+
+    transform:
+    scale(1.05)
+    translateY(-3px);
+}
+
+/* DETAILS SECTION */
+
+.details-section{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:50px;
+
+    padding:80px 70px;
+
+    background:#141414;
+}
+
+.left{
+    flex:2;
+}
+
+.left h2{
+
+    font-size:42px;
+
+    margin-bottom:25px;
+}
+
+.left p{
+
+    color:#ccc;
+
+    line-height:1.9;
+
+    margin-bottom:25px;
+
+    font-size:18px;
+}
+
+/* RIGHT */
+
+.right{
+    flex:1;
+}
+
+.info-card{
+
+    background:#1f1f1f;
+
+    padding:25px;
+
+    border-radius:10px;
+
+    margin-bottom:20px;
+
+    transition:0.3s;
+}
+
+.info-card:hover{
+
+    transform:translateY(-5px);
+
+    background:#2a2a2a;
+}
+
+.info-card h3{
+
+    color:#e50914;
+
+    margin-bottom:10px;
+}
+
+.info-card p{
+
+    color:#ccc;
+
+    line-height:1.7;
+}
+
+/* CHARACTERS */
+
+.characters{
+
+    padding:80px 70px;
+}
+
+.characters h2{
+
+    font-size:42px;
+
+    margin-bottom:40px;
+}
+
+/* GRID */
+
+.character-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+}
+
+/* CARD */
+
+.character-card{
+
+    background:#1c1c1c;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    transition:0.4s ease;
+}
+
+.character-card:hover{
+
+    transform:
+    translateY(-8px)
+    scale(1.03);
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,0.7);
+}
+
+/* IMAGE */
+
+.character-card img{
+
+    width:100%;
+    height:320px;
+
+    object-fit:cover;
+}
+
+/* TEXT */
+
+.character-card h3{
+
+    padding:20px 20px 10px;
+
+    font-size:24px;
+}
+
+.character-card p{
+
+    padding:0 20px 25px;
+
+    color:#bbb;
+
+    line-height:1.7;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .navbar{
+
+        padding:20px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero-content{
+
+        margin-left:20px;
+        margin-right:20px;
+    }
+
+    .hero-content h1{
+
+        font-size:52px;
+    }
+
+    .description{
+
+        font-size:16px;
+    }
+
+    .buttons{
+
+        flex-direction:column;
+
+        width:220px;
+    }
+
+    .details-section{
+
+        flex-direction:column;
+
+        padding:50px 20px;
+    }
+
+    .characters{
+
+        padding:50px 20px;
+    }
+
+    .characters h2,
+    .left h2{
+
+        font-size:32px;
+    }
+}
